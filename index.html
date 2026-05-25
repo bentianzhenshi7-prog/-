@@ -14,28 +14,37 @@
             padding: 20px;
             box-sizing: border-box;
             text-align: center;
-
-            /* --- 背景画像の設定はここから --- */
-            background-image: url("audio/731AB66C-2ACC-4F2B-B9A7-B759D24DB3DB.PNG"); /* 画像のファイル名 */
-            background-size: cover;                  /* 画面いっぱいに画像を広げる */
-            background-position: center;            /* 画像の中心を画面の真ん中に合わせる */
-            background-repeat: no-repeat;           /* 画像を繰り返さない */
-            background-attachment: fixed;           /* スクロールしても背景を固定する */
-            /* -------------------------------- */
-         }
-
-        /* 背景画像と文字が被って見づらい場合は、文字の色を白（#ffffff）などに変更してください */
-        h1 {
-            color: #ffffff; 
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* 文字の後ろに黒い影を入れて読みやすくします */
+            background-image: url("background.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            position: relative; /* 下部の文字を固定するために必要 */
         }
 
+        h1 {
+            color: #ffffff; 
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
 
         audio {
             width: 100%;
             max-width: 400px;
             margin-top: 20px;
         }
+
+        /* --- ここから追加：真ん中下の小さい文字用の設定 --- */
+        .bottom-text {※背景、一部コードにはAIを使用しています。
+            position: absolute;      /* 画面を基準に位置を決める */
+            bottom: 20px;            /* 画面の一番下から20px上の位置に固定 */
+            left: 50%;               /* 左右の真ん中に持ってくる */
+            transform: translateX(-50%); /* 真ん中ピタッとに調整 */
+            font-size: 0.8rem;       /* 文字のサイズを小さく（12pxくらい） */
+            color: rgba(255, 255, 255, 0.6); /* 文字の色を少し透明な白にして目立たなくする */
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+            white-space: nowrap;     /* スマホで勝手に改行されるのを防ぐ */
+        }
+        /* ----------------------------------------------- */
     </style>
 </head>
 <body>
@@ -43,8 +52,10 @@
     <h1>貴方はこの未来に何を期待していた</h1>
 
     <audio controls>
-        <source src="audio/anataha.m4a" type="audio/mp4">
+        <source src="anataha.m4a" type="audio/mp4">
     </audio>
+
+    <div class="bottom-text">ここに小さい文字を入れます</div>
 
 </body>
 </html>

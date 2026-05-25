@@ -1,14 +1,37 @@
 <html>
 <head>
-  <title>おい！</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>おい！</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* 画面全体を真ん中寄せにする設定 */
+        body {
+            display: flex;
+            flex-direction: column; /* 上から下に並べる */
+            align-items: center;    /* 左右の真ん中に寄せる */
+            justify-content: center;/* 上下の真ん中に寄せる */
+            min-height: 100vh;      /* 画面全体の高さを使う */
+            margin: 0;              /* 余計な隙間をなくす */
+            padding: 20px;          /* スマホの画面端にピタッとくっつかないようにする余白 */
+            box-sizing: border-box;
+            text-align: center;     /* 文字を中央揃えにする */
+        }
+
+        /* 再生バーのサイズ調整（スマホでもパソコンでも綺麗に見える最大幅） */
+        audio {
+            width: 100%;
+            max-width: 400px;       /* 横に広がりすぎないように制限 */
+            margin-top: 20px;       /* 文字との間に少し隙間をあける */
+        }
+    </style>
 </head>
 <body>
-  <h1>貴方はこの未来に何を期待していた</h1>
-  
-  <audio controls>
-<source src="audio/anataha.m4a" type="audio/mp4">
-</audio>
+
+    <h1>貴方はこの未来に何を期待していた</h1>
+
+    <audio controls>
+        <source src="anataha.m4a" type="audio/mp4">
+    </audio>
+
 </body>
 </html>

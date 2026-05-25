@@ -4,24 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        /* 画面全体を真ん中寄せにする設定 */
         body {
             display: flex;
-            flex-direction: column; /* 上から下に並べる */
-            align-items: center;    /* 左右の真ん中に寄せる */
-            justify-content: center;/* 上下の真ん中に寄せる */
-            min-height: 100vh;      /* 画面全体の高さを使う */
-            margin: 0;              /* 余計な隙間をなくす */
-            padding: 20px;          /* スマホの画面端にピタッとくっつかないようにする余白 */
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
             box-sizing: border-box;
-            text-align: center;     /* 文字を中央揃えにする */
+            text-align: center;
+
+            /* --- 背景画像の設定はここから --- */
+            background-image: url("731AB66C-2ACC-4F2B-B9A7-B759D24DB3DB.PNG"); /* 画像のファイル名 */
+            background-size: cover;                  /* 画面いっぱいに画像を広げる */
+            background-position: center;            /* 画像の中心を画面の真ん中に合わせる */
+            background-repeat: no-repeat;           /* 画像を繰り返さない */
+            background-attachment: fixed;           /* スクロールしても背景を固定する */
+            /* -------------------------------- */
         }
 
-        /* 再生バーのサイズ調整（スマホでもパソコンでも綺麗に見える最大幅） */
+        /* 背景画像と文字が被って見づらい場合は、文字の色を白（#ffffff）などに変更してください */
+        h1 {
+            color: #ffffff; 
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* 文字の後ろに黒い影を入れて読みやすくします */
+        }
+
         audio {
             width: 100%;
-            max-width: 400px;       /* 横に広がりすぎないように制限 */
-            margin-top: 20px;       /* 文字との間に少し隙間をあける */
+            max-width: 400px;
+            margin-top: 20px;
         }
     </style>
 </head>
